@@ -49,7 +49,7 @@ public class ResenaController {
     @PutMapping("/{id}")
     public ResponseEntity<Resena> actualizarResena( @PathVariable Integer id, @RequestBody Resena resena) {
         System.out.println("[ResenaController] -> actualizarResena id=" + id);
-        resena.getResenaId(id);
+        resena.setId_resena(id);
 
         Resena actualizado = resenaService.updateResena(resena);
 
